@@ -1,0 +1,67 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	user-select: none;
+	max-width: 100%;
+}
+
+
+
+
+body{
+     /* background: url("/assets/images/background-pattern-mobile.svg")  no-repeat;
+    background-size: 100vw 30vh;
+    background-color: hsl(275, 100%, 97%);
+    color: hsl(292, 42%, 14%);
+     height: 300px; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+	outline:3px solid black;
+	
+	
+}
+
+.banner {
+background: url("/assets/images/background-pattern-mobile.svg")  no-repeat;
+background-position:0; /*top-left corner*/
+  background-size: 100% auto;
+    height: 300px; 
+}
+
+
+
+@media screen and (min-width: 576px) {
+     body {
+        background: url("/assets/images/background-pattern-desktop.svg") no-repeat;
+          background-size: 100% auto;
+	background-position:top; /*top-left corner*/
+	   min-height: 300px;
+    } 
+
+
+    /* main{
+        width: 500px;
+    }
+
+    div .toggle{
+        float: none;
+    }
+
+    main{
+        min-height: 390px;
+    } */
+}

@@ -1,0 +1,218 @@
+@font-face {
+	font-family: "WorkSans";
+	src: url(/assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+
+@font-face {
+	font-family:"WorkSans-Italic" ;
+	src: url(/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+
+
+:root {
+
+--clr-white: hsl(0, 0%, 100%);
+--clr-light-pink: hsl(275, 100%, 97%);
+--clr-grayish-purple: hsl(292, 16%, 49%);
+--clr-dark-purple: hsl(292, 42%, 14%);
+--clr-medium-purple:hsl(281.75deg 81.51% 53.33%);
+--font-weight-medium: 400;
+--font-weight-heavy: 600;
+--font-weight-super-heavy:700;
+
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	user-select: none;
+	max-width: 100%;
+}
+
+
+
+
+body {
+	/* border: 1px solid red; */
+	/*you cannot see it because it applied out from your view, border you can see though*/
+
+	/* background-color: hsl(275, 100%, 97%);
+	height: 100dvh;
+	background-image: url(/assets/images/background-pattern-mobile.svg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: 100% auto;
+	background-position: fixed; */
+
+	/* display: grid;
+	place-items: center; 
+    */
+
+
+	font-family: "WorkSans";
+	height:100dvh;
+	/* width:100%; */
+	background-image: url(/assets/images/background-pattern-mobile.svg);
+	background-repeat: no-repeat;
+	background-color: var(--clr-light-pink);
+	position:relative;
+}
+
+.card {
+	background-color: var(--clr-white);
+	width: 90%;
+	max-width: 50rem;
+	/* height: 500px; */
+	/* margin: 150px auto; */
+	padding:1rem;
+	/* border:1px solid; */
+	border-radius:10px;
+	position:absolute;
+	top:150px;
+    left: 50%; /* Start positioning at 50% of the parent's width */
+    transform: translateX(-50%); /*Offset the element by half of its width*/
+    margin-bottom: 50rem;
+}
+
+.card__header{
+	margin-top: 1rem;
+	display:flex;
+	align-items: center;
+	gap:1rem;
+	
+}
+
+.card__title-icon {
+height:1.5rem;
+}
+
+.card__title-name{
+	font-weight: var(--font-weight-super-heavy);
+	font-size:2.5rem;
+}
+
+.card__content{
+	padding-top:1rem;
+	padding-bottom:1rem;
+	
+	display:flex;
+	flex-direction: column;
+	/* outline:1px solid yellow; */
+}
+
+
+.card__content:not(:last-child){
+	
+	border-bottom:1px solid rgb(234, 232, 232);
+
+}
+
+.card__question {
+	display:flex;
+	align-items: center;	
+	justify-content: space-between;
+	/* gap:1.5rem;  */
+	/* outline:1px solid orange; */
+}
+
+.card__question-description {
+	font-weight: var(--font-weight-heavy);
+	font-size: 0.9rem;
+	/* outline:1px solid black; */
+	max-width:75%;
+	padding-right: 1rem;
+}
+
+.card__question-description:hover {
+color:var(--clr-medium-purple);
+cursor: pointer;
+}
+
+
+
+.card__question-button {
+	display:inline-block;
+	border-radius: 50%;
+	border:none;
+	cursor: pointer;
+	background-color: white;
+	/* margin-right: 10px; */
+	/* outline:1px solid purple; */
+
+}
+
+
+
+.card__answer{
+	margin-block: 0.5rem;
+	display:none;
+	line-height: 1.2rem;
+	color:var(--clr-grayish-purple);
+	font-size: 0.9rem;
+	/* padding-inline: 1rem; */
+	/* outline:1px solid black; */
+}
+
+
+
+
+
+.card__answer--show {
+display:block; 
+/* animation-name:toshow; */
+}
+
+
+
+
+
+@media screen and (min-width: 376px) {
+	body {
+		background: url(/assets/images/background-pattern-desktop.svg) repeat-x;
+		background-color: var(--clr-light-pink); 
+		/* background-size: 100% auto; */
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

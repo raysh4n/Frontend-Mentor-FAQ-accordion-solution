@@ -1,0 +1,162 @@
+@font-face {
+	font-family: "Figtree";
+	src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+}
+
+@font-face {
+	font-family: "Figtree-Italic";
+	src: url(/assets/fonts/Figtree-Italic-VariableFont_wght.ttf);
+}
+
+:root {
+	--clr-white: hsl(0, 0%, 100%);
+	--clr-yellow: hsl(47, 88%, 63%);
+	--clr-gray500: hsl(0, 0%, 42%);
+	--clr-gray950: hsl(0, 0%, 7%);
+
+	--paragraph-xs: 0.8125rem; /* 13px */
+	--paragraph-sm: 0.875rem; /* 14px */
+
+	--font-weight-medium: 500;
+	--font-weight-heavy: 800;
+	--font-weight-super-heavy: 1000;
+}
+
+* {
+	margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	user-select: none;
+	max-width: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+body {
+	font-family: "Figtree", "Figtree-Italic";
+	background-color: var(--clr-yellow);
+}
+
+
+.container {
+	outline: 3px solid black;
+	height: 100dvh;
+	display: grid;
+	place-items: center;
+	/* display:flex;  same result as grid
+   justify-content: center;
+   align-items: center; */
+}
+
+.card {
+	/* outline:3px solid black; */
+	border: 1.3px solid black;
+	width: 20.4375rem; /* 327px */
+	background-color: white;
+	padding: 1.5rem;
+	border-radius: 1.25rem; /* 20px */
+	box-shadow: 0.625rem 0.625rem; /* 10px 10px */
+}
+
+.card__image {
+	height: 12.5rem; /* 200px */
+	background-image: url("/assets/images/illustration-article.svg");
+	background-position: -28px;
+	border-radius: 0.625rem; /* 10px */
+}
+
+.content {
+	margin-block: 1.5rem;
+}
+
+.content__tag {
+	width: 4.5625rem; /* 73px */
+	height: 1.625rem; /* 26px */
+	border-radius: 0.25rem; /* 4px */
+	text-align: center;
+	line-height: 1.625rem; /* 26px */ /*must be same as the height to be vertically centered*/
+	background-color: var(--clr-yellow);
+	font-size: 0.75rem; /* 12px */
+	font-weight: var(--font-weight-super-heavy);
+	margin-bottom: 0.75rem;
+}
+
+.content__published-date {
+	color: var(--clr-gray950);
+	margin-block: 0.75rem;
+	font-size: 0.75rem; /* 12px */
+	font-weight: var(--font-weight-medium);
+}
+
+.content__title {
+	margin-block: 0.75rem;
+	font-weight: var(--font-weight-heavy);
+	font-size: 1.25rem; /* 20px */
+}
+
+.content__title:hover,
+.content__title:focus {
+	color: var(--clr-yellow);
+	cursor: pointer;
+	outline: none; /*you can even remove the outline when on focus mode*/
+}
+
+.content__description {
+	/* font-family: "Figtree-Italic"; */
+	color: var(--clr-gray500);
+	margin-block: 0.75rem;
+	font-size: 0.875rem; /* 14px */
+	line-height: 1.5;
+	max-width: 34ch;
+}
+
+.card__author {
+	display: flex;
+	align-items: center;
+	/* outline:1px solid black; */
+	gap: 1rem;
+}
+
+.card__author-pic {
+	width: 2rem; /* 32px */
+}
+
+.card__author-name {
+	font-weight: var(--font-weight-heavy);
+}
+
+.card__author-name:hover,
+.card__author-name:focus {
+	color: var(--clr-yellow);
+	cursor: pointer;
+	outline: none; /*you can even remove the outline when on focus mode*/
+}
+
+.attribution {
+	/* outline: 1px solid red; */
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding-block: 0.2rem;
+	/*
+   The text is centered because the .attribution container spans the full width of its parent element (due to width: 100%;), and the text inside the block element is horizontally centered by default when no text-align property is specified.
+
+By default, browsers apply text-align: center to block elements like <div> in some scenarios, particularly when there is no overriding text-align specified for that element or its parent.
+   */
+}
+
+/*sm*/
+@media (min-width: 640px) {
+	.card {
+		width: 24rem; /* 384px */
+	}
+}
